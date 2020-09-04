@@ -1,26 +1,26 @@
-from MDP import MDP
+from QLearning import QLearning
 
 # v1
 
 def setup():
-    global mdpA, mdpB, mdpC
+    global QL
     size(550, 320)
-    mdpA = MDP(-1,-10, width, height, 2, 0, rows= 3 , cols = 2, number=0, a=0.5, g=0.8)
+    QL = QLearning(-1,-10, width, height, 2, 0, rows= 3 , cols = 2, a=0.5, g=0.8)
     
 def draw():
     background(51)
-    mdpA.display()
+    QL.display()
     
 def keyTyped():
     if key in ['w','W']:
-        mdpA.up()
+        QL.up()
     if key in ['d','D']:
-        mdpA.right()
+        QL.right()
     if key in ['s','S']:
-        mdpA.down()
+        QL.down()
     if key in ['a','A']:
-        mdpA.left()
+        QL.left()
     if key == " ":
-        mdpA.auto()
-    if key == "r":
-        mdpA.start()
+        QL.auto()
+    if key in ['r','R']:
+        QL.start()

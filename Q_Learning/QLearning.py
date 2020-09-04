@@ -1,9 +1,9 @@
 from Cell import Cell
 from UI import UI
 
-class MDP (object):
+class QLearning (object):
 
-    def __init__(self, r, d, ui_width, ui_height, dI, dJ ,rows = 3, cols = 2, number = 1, a = 0.5, g = 0.8):
+    def __init__(self, r, d, ui_width, ui_height, dI, dJ ,rows = 3, cols = 2, a = 0.5, g = 0.8):
         self.r = r
         self.d = d
         self.a = a
@@ -18,7 +18,6 @@ class MDP (object):
         
         self.ui_width=ui_width
         self.ui_height=ui_height
-        self.number = number
         
         self.ui = UI(ui_width, ui_height)
     
