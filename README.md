@@ -27,7 +27,7 @@
 
 #### Press "R" to restart the board, utilities and agent.
 
-#### The QLearning class has some parammiters.
+#### The QLearning class has some parameters.
 
 #### QLearning( r, d, ui_width, ui_height, dI, dJ ,rows = 3, cols = 2, a = 0.5, g = 0.8)
 
@@ -43,3 +43,4 @@
 * g  : Gama is the discount factor, by default it is 0.8
 
 
+#### To set a state to be terminal, it has to be done in the QLearning.gridInit() method, by invoking the setTerminal() method of the cell you want to be a terminal 
